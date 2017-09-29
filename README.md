@@ -1,6 +1,12 @@
 # securepipe
 Demonstration of setting up a secure pipe using containers and SELinux
 
+## Install Docker
+
+dnf install docker
+systemctl start docker
+systemctl enable docker
+
 ## Build
 
 docker build -t securepipe .
