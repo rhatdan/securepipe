@@ -1,6 +1,16 @@
 # securepipe
 Demonstration of setting up a secure pipe using containers and SELinux
 
+## Install Docker
+
+dnf install docker
+systemctl start docker
+systemctl enable docker
+
+## Install Atomic
+
+dnf install atomic 
+
 ## Build
 
 docker build -t securepipe .
