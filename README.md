@@ -7,6 +7,10 @@ dnf install docker
 systemctl start docker
 systemctl enable docker
 
+## Install Atomic
+
+dnf install atomic 
+
 ## Build
 
 docker build -t securepipe .
