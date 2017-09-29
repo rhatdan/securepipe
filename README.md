@@ -19,9 +19,13 @@ In three different terminals execute:
 
 Now type into the terminal running sp1, and you will see output in sp3
 
-In another fourth terminal execute
+You can also cat entire files to sp1
+
+cat /etc/passwd | /tmp/setup.sh sp1
 
 ## Attempt to breakout
+
+In a fourth terminal execute
 
 docker exec -ti sp1 sh
 
