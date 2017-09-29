@@ -1,0 +1,28 @@
+policy_module(securepipe, 0.1)
+
+attribute securepipe_domain;
+
+container_domain_template(sp1)
+container_domain_template(sp2)
+container_domain_template(sp3)
+
+type sp1_file_t;
+files_type(sp1_file_t)
+
+manage_sock_files_pattern(sp1_t, sp1_file_t, sp1_file_t)
+manage_files_pattern(sp1_t, sp1_file_t, sp1_file_t)
+
+type sp2_file_t;
+files_type(sp2_file_t)
+
+manage_sock_files_pattern(sp2_t, sp2_file_t, sp2_file_t)
+manage_files_pattern(sp2_t, sp2_file_t, sp2_file_t)
+
+type sp3_file_t;
+files_type(sp3_file_t)
+
+manage_sock_files_pattern(sp3_t, sp3_file_t, sp3_file_t)
+manage_files_pattern(sp3_t, sp3_file_t, sp3_file_t)
+
+stream_connect_pattern(sp1_t, sp2_file_t, sp2_file_t, sp2_t)
+stream_connect_pattern(sp2_t, sp3_file_t, sp3_file_t, sp3_t)
