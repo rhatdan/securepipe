@@ -1,26 +1,25 @@
 # securepipe
 Demonstration of setting up a secure pipe using containers and SELinux
 
-## Install Docker
+## Install Required software
 
-dnf install docker
+dnf install docker atomic buildah
 systemctl start docker
-systemctl enable docker
 
-## Install Atomic
-
-dnf install atomic 
-
-## Build
+## Build securepipe container image
 
 buildah bud -t securepipe .
+buildah push securepipe docker-daemon:securepipe:latest
+
+or 
+
 docker build -t securepipe .
 
-## Install
+## Install securepipe container image
 
 atomic install securepipe
 
-## Run
+## Run securepipes
 
 In three different terminals execute:
 
@@ -34,7 +33,7 @@ You can also cat entire files to sp1
 
 cat /etc/passwd | /tmp/setup.sh sp1
 
-## Attempt to breakout
+## Attempt to breakout of securepipes
 
 In a fourth terminal execute
 
