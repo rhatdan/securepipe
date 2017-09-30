@@ -13,6 +13,7 @@ dnf install atomic
 
 ## Build
 
+buildah bud -t securepipe .
 docker build -t securepipe .
 
 ## Install
