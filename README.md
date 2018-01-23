@@ -1,5 +1,5 @@
 # securepipe
-Demonstration of setting up a secure pipe using containers and SELinux. These scripts were last tested on Fedora 25.
+Demonstration of setting up a secure pipe using containers and SELinux. These scripts were last tested on Fedora 27.
 
 ## Install Required software
 `````
