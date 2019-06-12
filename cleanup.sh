@@ -1,2 +1,2 @@
-docker rm -f $(docker ps -q)
+podman rm -af
 rm -rf /run/sp*
