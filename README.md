@@ -9,12 +9,12 @@ $ sudo dnf install podman
 ## Build securepipe container image
 `````
 $ git clone https://github.com/rhatdan/securepipe.git && cd securepipe/
-$ sudo podman build bud -t securepipe .
+$ sudo podman build -t securepipe .
 `````
 
 ## Install securepipe container image
 `````
-$ sudo podman runlabel install securepipe
+$ sudo podman container runlabel install securepipe
 `````
 
 ## Run securepipes
