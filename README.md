@@ -3,8 +3,7 @@ Demonstration of setting up a secure pipe using containers and SELinux. These sc
 
 ## Install Required software
 `````
-$ sudo dnf install docker atomic buildah
-$ sudo systemctl start docker
+$ sudo dnf install podman atomic buildah
 `````
 
 ## Build securepipe container image
@@ -17,7 +16,7 @@ $ sudo buildah push securepipe docker-daemon:securepipe:latest
 or 
 
 `````
-$ sudo docker build -t securepipe .
+$ sudo podman build -t securepipe .
 `````
 
 ## Install securepipe container image
@@ -55,6 +54,6 @@ $ sudo cat /etc/passwd | /tmp/setup.sh sp1
 
 In a fourth terminal execute
 `````
-$ sudo docker exec -ti sp1 sh
+$ sudo podman exec -ti sp1 sh
 `````
 And play around
