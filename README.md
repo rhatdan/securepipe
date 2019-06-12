@@ -3,20 +3,13 @@ Demonstration of setting up a secure pipe using containers and SELinux. These sc
 
 ## Install Required software
 `````
-$ sudo dnf install podman buildah
+$ sudo dnf install podman
 `````
 
 ## Build securepipe container image
 `````
 $ git clone https://github.com/rhatdan/securepipe.git && cd securepipe/
-$ sudo buildah bud -t securepipe .
-$ sudo buildah push securepipe docker-daemon:securepipe:latest
-`````
-
-or 
-
-`````
-$ sudo podman build -t securepipe .
+$ sudo podman build bud -t securepipe .
 `````
 
 ## Install securepipe container image
