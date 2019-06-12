@@ -3,7 +3,7 @@ Demonstration of setting up a secure pipe using containers and SELinux. These sc
 
 ## Install Required software
 `````
-$ sudo dnf install podman atomic buildah
+$ sudo dnf install podman buildah
 `````
 
 ## Build securepipe container image
@@ -21,7 +21,7 @@ $ sudo podman build -t securepipe .
 
 ## Install securepipe container image
 `````
-$ sudo atomic install securepipe
+$ sudo podman runlabel install securepipe
 `````
 
 ## Run securepipes
